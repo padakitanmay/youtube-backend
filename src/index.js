@@ -11,6 +11,9 @@ connectDB()
         app.listen(port, () => {
             console.log("Server running on port: ", port);
         });
+        app.get("/",(req,res)=>{
+            res.send("SERVER RUNNNNNN")
+        })
     })
     .catch((err) => {
         console.log("DB failed", err);
